@@ -1,0 +1,159 @@
+body {
+    font-family: Georgia;
+    font-size: 16px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: Helvetica;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+h2 {
+    text-decoration: underline;
+    font-family: Helvetica;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+}
+
+p {
+    font-family: Georgia;
+    font-size: 16px;
+}
+
+#grid-container {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1.2fr 2.5fr /*100px*/ 1.2fr;
+    grid-gap: 10px;
+}
+
+.a {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border: 2px blue solid;
+    border-radius: 10px;
+    min-height: 550px;
+    margin-left: 10px;
+    text-align: left;
+    padding: 5px;
+}
+
+.b {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border: 2px blue solid;
+    border-radius: 10px;
+    height: 550px;
+    text-align: center;
+    padding: 5px;
+    display: none;
+}
+
+/*.c {
+    justify-content: center;
+} */
+.d {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    border: 2px blue solid;
+    border-radius: 10px;
+    min-height: 550px;
+    margin-right: 10px;
+    text-align: left;
+    padding: 5px;
+    display: none;
+}
+
+.e {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    border: 2px blue solid;
+    border-radius: 10px;
+    min-height: 550px;
+    margin-right: 10px;
+    text-align: left;
+    padding: 5px;
+    display: none;
+}
+
+#circle {
+    background: lightblue;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    position: relative;
+    top: 420px;
+    left: 12.5px;
+    transition: transform 2s;
+}
+
+#circle:hover {
+    transform: translateY(-300px);
+    animation: alternate-reverse;
+}
+#throw-button {
+    position: relative;
+    top: 425px;
+    left: 14px;
+}
+
+li {
+    font-size: 16px;
+    font-family: Georgia;
+    margin: 4px;
+}
+
+.variables li {
+    display: inline;
+    border: 1px lightgray solid;
+    padding: 5px;
+    margin: 10px;
+    line-height: 2.5;
+}
+
+.d form {
+    margin: 10px;
+}
+
+#button_container {
+    text-align: center;
+    display: none;
+}
+
+#button_container_2 {
+    text-align: center;
+    display: block;
+}
+
+#test p {
+    opacity: 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+#test_2 p {
+    opacity: 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+#test_3 ul {
+    opacity: 0;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 5%;
+}
+
+video::-webkit-media-controls-timeline {
+    display: none;
+}
+
+label {
+    margin-bottom: 5px;
+}

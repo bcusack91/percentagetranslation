@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <!-- Meta Data -->
+        <meta charset="UTF-8">
+        <meta name="author" content="Brendan Cusack">
+        <meta name="keywords" value="Physics, Kinematics, Tutorials">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a class="navbar-brand" href="#">CusackPrep</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="#">About</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Physics</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Chemistry</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Other Courses
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Algebra 2</a>
+                        <a class="dropdown-item" href="#">PreCalculus</a>
+                        <a class="dropdown-item" href="#">Calculus</a>
+                    </div>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="grid-container">
+            <div class="a">
+                <aside>
+                    <h2>Translating Percents</h2>
+                    <div id="test">
+                        <p>Welcome to the exciting world of SAT percentages! In order to understand percentages, we'll first explain how to interpret percentage word problems and create mathematical equations.</p>
+                    </div>
+                    <div id="test_2">
+                        <p>The following list is a key to help you convert percentage word problems into mathematical equations. The word(s) on the left translate to the symbol on the right:</p>
+                    </div>
+                    <div id="test_3">
+                        <ul>
+                            <li>
+                                is or has \(\Rightarrow \) <b>=</b>
+                            </li>
+                            <li id="of_translation">
+                                of \(\Rightarrow \cdot\) (multiplication symbol)
+                            </li>
+                            <li id="percent_translation">
+                                percent \(\Rightarrow \frac{}{100}\)
+                            </li>
+                            <li>
+                                What percent \( \Rightarrow \frac{x}{100} \)
+                            </li>
+                            <li>
+                                What Number \( \Rightarrow x, y, n\) (any variable)
+                            </li>
+                            <li>
+                                Some Number \( \Rightarrow x, y, n\) (any variable)
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div id="button_container">
+                        <div id="test_4">
+                            <button type="button" class="btn btn-primary" onclick="showVideo()">See Video</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="b" id="video_container">
+                <h2>Video Follow Along</h2>
+                <video width="720" height="auto" id="video1" controls>
+                    <source src="media/Translating Percents_2.mov" type="video/mp4">
+                </video>
+            </div>
+            <!--<div class="c">
+                <div id="circle"></div>
+                <button type="button" class="btn btn-primary" id="throw-button">Throw</button>
+            </div>-->
+            <div class="d" id="Knowledge_Check">
+                <h2>Check For Understanding</h2>
+                <p>Translate the following word percentages word problem into a mathematical equation:</p>
+                <p>1.) 12 percent of 150 is what number?</p>
+                <form>
+                    <input type="radio" id="choice_1" name="Step_1_Answer" value="choice_1">
+                    <label for="male">\(\frac{12}{100} \cdot 150 = x\)</label><br>
+                    <input type="radio" id="choice_2" name="Step_1_Answer" value="choice_2">
+                    <label for="female">\(12\% \div 150 = x\)</label><br>
+                    <input type="radio" id="choice_3" name="Step_1_Answer" value="choice_3">
+                    <label for="other">\(\frac{12}{100} \div 150 = x\)</label><br>
+                    <input type="radio" id="choice_4" name="Step_1_Answer" value="choice_4">
+                    <label for="other">\(\frac{x}{100} \cdot 150 = 12\)</label><br>
+                    <br>
+                    <div id="button_container_2">
+                        <button type="button" class="btn btn-primary" onclick=evaluateResponse()>Check</button>
+                    </div>  
+                </form>
+                <br>
+                <div id="Answer_1_Feedback">
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="e" id="Knowledge_Check_2">
+                <h2>Problem 2</h2>
+                <p>Translate the following word percentages word problem into a mathematical equation:</p>
+                <p>2.) 20 is what percent of 400?</p>
+                <form>
+                    <input type="radio" id="choice_1" name="Step_2_Answer" value="choice_1">
+                    <label for="male">\(20 = \frac{x}{100} \div 400\)</label><br>
+                    <input type="radio" id="choice_2" name="Step_2_Answer" value="choice_2">
+                    <label for="female">\(\frac{20}{100} \cdot x = 400\)</label><br>
+                    <input type="radio" id="choice_3" name="Step_2_Answer" value="choice_3">
+                    <label for="other">\(20 = \frac{x}{100} \cdot 400\)</label><br>
+                    <input type="radio" id="choice_4" name="Step_2_Answer" value="choice_4">
+                    <label for="other">\(\frac{x}{100} \cdot 20 = 400\)</label><br>
+                    <br>
+                    <div id="button_container_2">
+                        <button type="button" class="btn btn-primary" onclick=evaluateResponse_2()>Check</button>
+                    </div>  
+                </form>
+                <br>
+                <div id="Answer_2_Feedback">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+
+        </footer>
+        <script>
+            $("#test p").delay(500).animate({"opacity": "1"}, 1200);
+            $("#test_2 p").delay(2500).animate({"opacity": "1"}, 1200);
+            $("#test_3 ul").delay(5000).animate({"opacity": "1"}, 1200);
+            //$("#button_container").css("display", 'block').delay(10000);
+            setTimeout(
+                function() 
+                {
+                    document.getElementById('button_container').style.display = "block";
+                }, 10000);
+            
+            function showVideo() {
+                document.getElementById('video_container').style.display = "block";
+            }
+            /*<![CDATA[*/
+            document.querySelector('video').addEventListener('ended',function(){
+                console.log('Video has ended!');
+                document.getElementById('Knowledge_Check').style.display = "block";
+            }, false);
+            /*]]>*/
+
+            function evaluateResponse() {
+                const rbs = document.querySelectorAll('input[name="Step_1_Answer"]');
+                let selectedValue;
+                for (const rb of rbs) {
+                    if (rb.checked) {
+                        selectedValue = rb.value;
+                        break;
+                    }
+                }
+    
+                if (selectedValue == 'choice_1') {
+                    document.getElementById('of_translation').style.border = "none";
+                    document.getElementById('percent_translation').style.border = "none";
+                    document.getElementById('Answer_1_Feedback').style.color = "green";
+                    document.getElementById('Answer_1_Feedback').innerHTML = "Well done!";
+                    document.getElementById('Answer_1_Feedback').style.textAlign = "center";
+                    setTimeout(function() { 
+                        document.getElementById('Knowledge_Check').style.display = "none";
+                        document.getElementById('Knowledge_Check_2').style.display = "block";
+                    }, 3000
+                    )
+                }
+
+                else if (selectedValue == 'choice_2') {
+                    document.getElementById('percent_translation').style.border = "solid 2px red";
+                    document.getElementById('of_translation').style.border = "solid 2px red";
+                    document.getElementById('Answer_1_Feedback').style.color = "red";
+                    document.getElementById('Answer_1_Feedback').innerHTML = "Hint: Check the translations list on the left and recall how the percentage symbol % translates. Also recall how the word of translates.";
+                }
+
+                else if (selectedValue == 'choice_3') {
+                    document.getElementById('percent_translation').style.border = "none";
+                    document.getElementById('of_translation').style.border = "solid 2px red";
+                    document.getElementById('Answer_1_Feedback').style.color = "red";
+                    document.getElementById('Answer_1_Feedback').innerHTML = "Hint: Check the translations list on the left and recall how the word of translates to text.";
+                }
+
+                else if (selectedValue == 'choice_4') {
+                    document.getElementById('of_translation').style.border = "none";
+                    document.getElementById('percent_translation').style.border = "none";
+                    document.getElementById('Answer_1_Feedback').style.color = "red";
+                    document.getElementById('Answer_1_Feedback').innerHTML = "Hint: You have multiple mistakes with this equation. Please re-read the text and consider rewatching the video before your next attempt.";
+                    document.getElementById('Answer_1_Feedback').style.textAlign = "center";
+                }
+            }
+
+            function evaluateResponse_2() {
+                const rbs = document.querySelectorAll('input[name="Step_2_Answer"]');
+                let selectedValue;
+                for (const rb of rbs) {
+                    if (rb.checked) {
+                        selectedValue = rb.value;
+                        break;
+                    }
+                }
+    
+                if (selectedValue == 'choice_1') {
+                    document.getElementById('percent_translation').style.border = "none";
+                    document.getElementById('of_translation').style.border = "solid 2px red";
+                    document.getElementById('Answer_2_Feedback').style.color = "red";
+                    document.getElementById('Answer_2_Feedback').innerHTML = "Incorrect. Please try again.<br><br>Hint: Check the translations list on the left and recall how the word of translates to text.";
+                }
+
+                else if (selectedValue == 'choice_2') {
+                    document.getElementById('of_translation').style.border = "none";
+                    document.getElementById('percent_translation').style.border = "none";
+                    document.getElementById('Answer_2_Feedback').style.color = "red";
+                    document.getElementById('Answer_2_Feedback').innerHTML = "Hint: You have multiple mistakes with this equation. Please re-read the text and consider rewatching the video before your next attempt.";
+                    document.getElementById('Answer_2_Feedback').style.textAlign = "center";
+                }
+
+                else if (selectedValue == 'choice_3') {
+                    document.getElementById('of_translation').style.border = "none";
+                    document.getElementById('percent_translation').style.border = "none";
+                    document.getElementById('Answer_2_Feedback').style.color = "green";
+                    document.getElementById('Answer_2_Feedback').innerHTML = "Well done!";
+                    document.getElementById('Answer_2_Feedback').style.textAlign = "center";
+                    /*setTimeout(function() { 
+                        document.getElementById('Knowledge_Check').style.display = "none";
+                        document.getElementById('Knowledge_Check_2').style.display = "block";
+                    }, 3000
+                    )*/
+                }
+
+                else if (selectedValue == 'choice_4') {
+                    document.getElementById('of_translation').style.border = "none";
+                    document.getElementById('percent_translation').style.border = "none";
+                    document.getElementById('Answer_2_Feedback').style.color = "red";
+                    document.getElementById('Answer_2_Feedback').innerHTML = "Hint: You have multiple mistakes with this equation. Please re-read the text and consider rewatching the video before your next attempt.";
+                    document.getElementById('Answer_2_Feedback').style.textAlign = "center";
+                }
+            }
+        </script>
+    </body>
+</html>
